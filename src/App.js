@@ -1,11 +1,16 @@
-
+import React from 'react'
 import './App.css';
+import Home from './pages'
+import {BrowserRouter as Router,  Route, Routes} from 'react-router-dom'
+import SigninPage from './pages/signin';
 
 function App() {
   return (
-    <div className="App">
-    <h1>My portfolio</h1>
-    </div>
+    <Router>
+   <Routes>
+   <Route path="/" element={<Home />} exact /> <Route path="/signin" element={<SigninPage />} exact />.
+    </Routes>
+    </Router>
   );
 }
 
